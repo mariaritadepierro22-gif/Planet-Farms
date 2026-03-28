@@ -1,0 +1,139 @@
+.title{
+    gap: 20px; 
+}
+
+.logo-static{
+    padding-bottom: 10px;
+}
+
+main{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+.tricolore{
+    width: 50%;
+    height: 100px;
+    padding-left: 50px;
+    margin-left: 50px;
+}
+
+.ceo{
+    width: 290px;
+    height: 250px;
+    padding-top: 50px;
+    cursor: pointer;
+}
+
+p{
+    font-size: 20px;
+}
+
+/*Impostazione regole del paragrafo introduttivo*/
+.paragraph-1{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 50px;
+    margin: 15px auto;
+    font-weight: bold;
+    justify-content: space-around;
+    border: solid 5px #FFFFFF;
+    background-color: #EBC700;
+}
+
+/*Impostazione regole del secondo paragrafo*/
+.paragraph-2{
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 0;
+    margin: 10px;
+    background-image: url('/img/leafes_img.jpg');
+    border: solid 5px #000000;
+    color:#FFFFFF;
+}
+
+.paragraph-1,
+.paragraph-2{
+    border-radius: 200px;
+    font-size: 20px;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.paragraph-1-text{
+   width: 360px;
+   padding-top: 20px;
+}
+
+.paragraph-2-text{
+    padding: 30px;
+    border-radius: 80px 5px;
+    margin: 10px auto;
+    width: 95%;
+    max-width: 600px;
+    box-sizing: border-box;
+    background-color:#006400;
+}
+
+.no-padding{
+    padding-bottom: 0;
+}
+
+/* ----------------
+    Swipe immagini
+-------------------*/
+
+/*Per indicare all'utente come avviare l'interazione*/
+.click_up{
+    padding: 5px 0;
+    margin: 10px auto;
+    border-radius: 50px;
+    border: #FFFFFF solid 2px;
+    text-align: center;
+    background-color: #2D5A27;
+    color: #FFFFFF;    
+}
+
+.bi-hand-index-thumb-fill{
+    padding: 0 10px 0 15px;
+}
+
+/* ----------------------------------------------------------------
+    Responsive Design per adattare il layout ai dispositivi mobile
+------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    main{
+        padding-top: 5px;
+    }
+
+    .paragraph-1,
+    .paragraph-2 {
+        margin: 20px 15px; /* Riduciamo i margini laterali da 100px a 15px */
+        border-radius: 50px; /* Arrotondamento meno estremo per schermi piccoli */
+        width: auto;
+    }
+
+    .paragraph-1{
+        grid-template-columns: 1fr; /* Da 2 colonne a 1 colonna */
+        padding: 20px;
+    }
+    .paragraph-2 {
+        justify-content: center; /* Centra il box verde */
+        padding: 20px 0;
+        background-size: cover; /* Assicura che l'immagine di sfondo copra bene l'area */
+    }
+
+    .paragraph-1-text {
+        width: 100%; /* I testi occupano tutta la larghezza disponibile */
+    }
+
+    .paragraph-2-text {
+        width: 90%; /* Invece di 600px fissi, usa il 90% della larghezza disponibile */
+        margin: 0; /* Rimosso il margine destro di 100px che spingeva il testo */
+        padding: 20px;
+        font-size: 18px; /* Leggera riduzione del font per ottimizzare lo spazio */
+    }
+}

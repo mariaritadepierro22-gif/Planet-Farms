@@ -1,0 +1,351 @@
+/*Reset globale: azzeramento di margini e padding, così da poterli
+gestire con box-model per garantire la coerenza tra i diversi browser*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------
+    Stili comuni
+------------------ */
+
+/*Stile Intestazione*/
+header{
+    place-items: center;
+    background-color:#D6D2CB;
+}
+
+.title{
+    border: solid 8px #B8860B;
+    border-radius: 45px;
+    font-size: 30px;
+    gap: 10px;
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px 20px;
+    margin: 10px 0;
+    width: 75%;
+    min-height: 130px;
+    height: auto;
+    color:#FFFFFF;
+    /*Cambio colore da un verde più chiaro ad uno
+    più scuro per simulare un raggio solare*/
+    background: linear-gradient(135deg, #3A7533 0%, #2D5A27 80%);
+    /* Obreggiatura ottenuta tramite box-shadow e text-shadow per migliorare la UX */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.2); 
+}
+
+.logo{
+    padding-bottom: 10px;
+}
+
+/* Feedback visivo hover: incremento dimensionale per
+segnalare l'interattività dell'elemento */
+.logo:hover{
+    width: 110px;
+    height: 110px;
+    margin-top: 10px;
+}
+
+/*Stile Parte principale*/
+main{
+    background-color: #006400;
+}
+
+main,
+.structure {
+    display: grid;
+}
+
+.structure{
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.grid-3-col {
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+}
+
+.grid-2-col {
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+}
+
+.img-round-lg { border-radius: 100px; }
+.img-round-md { border-radius: 50px; }
+.img-round-sm { border-radius: 30px; }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.info-box{
+    padding: 15px;
+    margin: 10px auto;
+    width: 90%;      
+    max-width: 400px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Ottimizzazione della distribuzione delle parole tramite
+sillabazione automatica e giustificazione del testo. */
+.info-box,
+.paragraph-1,
+.paragraph-2,
+td{
+    text-align: justify;
+    hyphens: auto;        
+    text-align-last: left;
+}
+
+table{
+    margin: 10px 10px 0 10px;
+    border: solid 3px;
+    padding-bottom: 10px;
+}
+
+th{
+    padding: 15px;
+    font-size: 25px;
+}
+
+td{
+    padding: 10px 15px 0 15px;
+    font-size: 18px;
+}
+
+figcaption{
+    font-family: cursive;
+    padding: 3px 10px;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: #2D5A27;
+}
+
+nav:hover{
+    color: #FFFFFF; 
+}
+
+nav{
+    grid-template-columns: 20% 10%;
+    border: solid;
+    margin-top: 10px;
+    padding: 3px 0 0 10px;
+    height: 120px;
+    color: #000000;
+    background-color: #249624;
+}
+
+p{
+    font-size: 17px;
+}
+
+ul{
+    width: 300px; 
+}
+
+li{
+    padding-bottom: 10px;
+}
+
+/*Modifica del colore dell'icona, per renderla più visibile*/
+.bi-file-earmark-arrow-down-fill {
+    margin-left: 5px;
+    color: #EBC700;
+}
+
+.salad{
+    border-radius: 100px;
+    margin-top: 5px;
+    width: 100px;
+    height: 100px;
+    gap: 20px;
+}
+
+/*Modifica il colore di default dei link non ancora aperti*/
+a:link{
+    /* Forzatura dell'underlining per garantire coerenza visiva dei collegamenti */
+    text-decoration: underline solid 2px #FFFFFF; 
+    color: #FFFFFF;
+}
+
+/*Modifica il colore dei link dopo averli visitati*/
+a:visited{
+    color: #EBC700;
+    text-decoration: underline solid 2px #EBC700;
+}
+
+/* Miglioramento dell'accessibilità:
+feedback visivo per la navigazione tramite tastiera. */
+a:focus, 
+button:focus{
+    outline-offset: 4px; /* Crea uno spazio tra l'elemento e l'outline */
+    outline: 3px solid #EBC700;
+}
+
+/*Stile fondo pagina*/
+footer{
+    background-color:#87650E;
+}
+
+footer a:visited{
+    color: #FF8C00;
+    text-decoration: underline solid 2px #FF8C00;
+}
+
+address{
+    margin: 0 0 0 10px;
+    width: 450px;
+}
+
+h3{
+    padding-top: 5px;
+}
+
+.companyData{
+    padding: 10px 0 5px 0;
+}
+
+.contacts{
+    margin-top: 8px;
+    align-items: center;
+}
+
+/*Creazione di un bordo stile botton per i contatti*/
+span{
+    display: inline-block;
+    border-radius: 12px;
+    padding: 3px 5px;
+    margin-right: 5px;
+    border: 1px #000000 solid;
+}
+
+/*Raggruppamento delle proprietà comuni a più selettori*/
+.title,
+ul,
+address,
+.contacts{
+    display: flex;
+}
+
+ul,
+address{
+    flex-direction: column;
+}
+
+header,
+nav,
+footer{
+    display: grid;
+}
+
+.logo,
+.logo-static{
+    width: auto;
+    max-width: 100px;
+    height: auto;
+}
+
+nav,
+.companyData,
+address{
+    font-weight: bold;
+}
+
+footer,
+header{
+    grid-template-columns: auto;
+}
+
+nav,
+address{
+    font-size: 20px;
+}
+
+/* ----------------------------------------------------------------
+    Responsive Design per adattare il layout ai dispositivi mobile
+------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden; /* Blocca lo scorrimento laterale della pagina */
+    }
+
+    header{
+        margin: auto;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .title {
+        width: 95%; /* Allarghiamo il titolo su schermi piccoli */
+        height: auto; /* Permettiamo al titolo di espandersi verticalmente */
+        font-size: 18px; 
+        margin: auto;
+        text-align: center;
+    }
+
+    .logo,
+    .logo-static{
+        padding-top: 10px;
+    }
+
+    main,
+    table{
+        display: block;
+        width: 100%;
+    }
+    
+    .structure {
+        display: grid;
+        grid-template-columns: 1fr; /* Passaggio a singola colonna */
+        justify-items: center;
+    }
+
+    table {
+        margin: 5px auto; /* Centra la tabella */
+        overflow-x: auto; /* Permette di scorrere la tabella lateralmente se il contenuto eccede */
+    }
+
+    th{
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    td {
+        font-size: 12px; 
+        padding: 5px;
+    }
+
+    main .info-box {
+        width: 90%; /* Il testo si adatta alla larghezza del telefono */
+        margin: 0 auto;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        height: auto;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin: 10px 0 0 0;
+    }
+
+    ul,
+    address {
+        width: 100%; /* Rimuoviamo il limite di 300px che causerebbe scroll orizzontale */
+    }
+
+    address {
+        font-size: 20px;
+    }
+}

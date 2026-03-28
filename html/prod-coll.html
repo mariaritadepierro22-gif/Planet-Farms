@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="/css/common_style.css">
+        <link rel="stylesheet" href="/css/prod-coll_style.css">
+        
+        <title>Prodotti e Collaborazioni</title>
+        <link rel="icon" type="image/svg" href="/img/logo.svg">
+    </head>
+
+    <body>
+        <!--Intestazione-->
+        <header>
+            <div class="title">
+                <h1>Prodotti e Collaborazioni</h1>
+                <a href="/html/index.html">
+                    <img class="logo" src="/img/logo_img.svg" alt="logo Planet Farms">
+                </a> 
+            </div>
+        </header>
+
+        <!--Parte principale-->
+        <main>
+            <section class="structure grid-3-col">
+                <!--Primo box informativo-->
+                <article class="info-box card-item-1">
+                    <h2>Tutti in cucina</h2>
+                    <p>
+                        I nostri prodotti, utilizzati dai
+                        grandi chef come i fratelli Cerea,
+                        del ristorante 3 stelle Michelin
+                        "Da Vittorio".
+                    </p>
+
+                    <figure>
+                        <img class="photo kitchen img-round-lg" src="/img/kitchen.jpg" alt="cucina in cui si utilizzano i prodotti Planet Farms">
+                        <figcaption>Planet Farms e i grandi chef</figcaption>
+                        <img class="photo bowl img-round-md" src="/img/bowl.jpg" alt="i nostri prodotti in tavola">
+                        <figcaption>Foglie dalla farm alla tavola</figcaption>
+                    </figure>
+                </article>
+
+                <!--Secondo box informativo-->
+                <article class="info-box card-item-2">
+                    <h2>Perchè sprecare, quando lo si può riutilizzare?</h2>
+                    <p>
+                        Tutto il basilico che non viene venduto
+                        lo trasformiamo in un delizioso pesto.
+                    </p>
+                    <figure>
+                        <img class="photo pesto img-round-lg" src="/img/pesto.jpg" alt="pesto di basilico">
+                        <figcaption>Profumo di basilico</figcaption>
+                        <img class="photo pasta img-round-md" src="/img/pasta.jpg" alt="pasta con il pesto">
+                        <figcaption>Milano = Genova</figcaption>
+                    </figure>
+                </article>
+
+                <!--Terzo box informativo-->
+                <article class="info-box card-item-3">
+                    <h2>Prodotti sempre freschi</h2>
+                    <p>
+                        Foglie d'insalata in ogni momento.
+                    </p>
+                    <p class="click_down"><i class="bi bi-hand-index-thumb"></i> Clicca sulle insalate!</p>
+                    <!--Mini Shop-->
+                    <figure class="shop_card-wrapper">
+                        <img class="photo products img-round-sm" id="img-products" src="/img/products.jpg" alt="i prodotti che vendiamo">
+                        <figcaption class="descr5">La nostra insalata</figcaption>
+
+                        <div class="shop-card" id="shop">
+                            <button class="close" id="close-shop" title="Chiudi">
+                                <i class="bi bi-x"></i></button>
+                            <h3>Acquista ora</h3>
+                            <select id="select_products">
+                                <option value="Baby Iceberg">Baby Iceberg - €1,99</option>
+                                <option value="Lattuga Gentile">Lattuga Gentile - €2,19</option>
+                                <option value="Mix Delicato">Mix Delicato - €1,99</option>
+                                <option value="Misticanza">Misticanza - €1,99</option>
+                                <option value="Mix Vivace">Mix Vivace - €2,19</option>
+                                <option value="Mix Rustico">Mix Rustico - €2,19</option>
+                            </select>
+                            <button id="buy">
+                                <i class="bi bi-cart-fill"></i> Compra
+                            </button>
+                            <p id="shop-feedback"></p>
+                        </div>
+
+                        <img class="photo b-corp" src="/img/b-corp.jpg" alt="marchio certificazione b-corp">
+                        <figcaption class="descr6">Certificazione B CORP</figcaption>
+                    </figure>
+                </article>
+            </section>
+
+            <!--Menù di navigazione-->
+            <nav>
+                <ul>
+                    <li><a href="/html/report.html" target="_blank">Report di sostenibilità</a><i class="bi bi-file-earmark-arrow-down-fill"></i></li>
+                    <li><a href="/html/projects.html" target="_blank">I nostri progetti</a></li>
+                    <li><a href="/html/videos.html" target="_blank">I nostri video</a></li>
+                </ul>
+                <img class="salad" src="/img/salad.jpg" alt="">
+            </nav>
+        </main>
+
+        <!--Fondo pagina-->
+        <footer>
+            <!--Sezione contatti azienda-->
+            <address> 
+                <h3>Contatti</h3>
+                <div class="contacts"><span>Email <i class="bi bi-envelope-at-fill"></i></span><a href="mailto:planetfarms@gmail.com">planetfarms@gmail.com</a></div>
+                <div class="contacts"><span>Telefono <i class="bi bi-telephone-fill"></i></span><a href="tel:02 8765 4321">02 8765 4321</a></div>
+                <div class="contacts"><span>Instagram <i class="bi bi-instagram"></i></span><a href="https://www.instagram.com/planetfarms/">planet_farms</a></div>
+                <div class="contacts"><span>YouTube <i class="bi bi-youtube"></i></span><a href="https://www.youtube.com/@planetfarms">planetfarms</a></div>
+                <div class="companyData">
+                    <a href="/html/privacy.html" target="_blank">Informativa sulla privacy</a><br>
+                    P.IVA 02345678901
+                </div>
+            </address>
+        </footer>
+        <!--Collegamento al codice JS-->
+        <script src="/js/prod-coll_interactive.js"> </script>
+    </body>
+</html>

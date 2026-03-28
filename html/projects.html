@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="/css/common_style.css">
+        <link rel="stylesheet" href="/css/projects_style.css">
+        
+        <title>I nostri progetti</title>
+        <link rel="icon" type="image/svg" href="/img/logo.svg">
+    </head>
+
+    <body>
+        <!--Intestazione-->
+        <header>
+            <div class="title">
+                <h1>I nostri progetti</h1>
+                <a href="/html/index.html">
+                    <img class="logo" src="/img/logo_img.svg" alt="logo Planet Farms">
+                </a>
+            </div>
+        </header>
+
+        <!--Parte principale-->
+        <main>
+            <section class="structure grid-3-col">
+                <!--Primo box informativo-->
+                <article class="info-box card-item-1">
+                    <h2>Meno Energia</h2>
+                    <p>
+                        Ci stiamo muovendo per cercare
+                        di attrezzare ogni farm di pannelli
+                        solari, così da ridurre il consumo
+                        energetico. Oltre a dotare i nostri
+                        dipendenti di camion elettrici.
+                    </p>
+                    <figure>
+                        <img class="photo solar_panels" src="/img/solar_panels.jpg" alt="Pannelli solari">
+                        <figcaption>Pannelli Solari</figcaption>
+                        <img class="photo trucks" src="/img/trucks.jpg" alt="Camion elettrici per il trasporto a zero emissione">
+                        <figcaption>Camion elettrici</figcaption>
+
+                        <!--Animazione fulmine-->
+                        <div class="charging-wrapper" id="charging-container">
+                            <img class="photo charging_port" id="charging-img" src="/img/charging_port.jpg" alt="Presa di corrente dei Camion elettrici">
+                            <figcaption>
+                                Clicca per ricaricare! <i class="bi bi-hand-index-thumb"></i> <i class="bi bi-lightning-charge-fill" id="volt"></i>
+                            </figcaption>
+
+                            <i class="bi bi-lightning-charge-fill lightning-bolt" id="lightning-bolt"></i>
+                            <audio id="lightning_sound" src="/audio/lightning_sound.mp3"></audio>
+
+                        </div>
+                    </figure>
+                </article>
+
+                <!--Secondo box informativo-->
+                <article class="info-box card-item-2">
+                    <h2>Nelle scuole</h2>
+                    <p>
+                        Siamo fieri del progetto in cui
+                        andiamo nelle scuole, per educare i 
+                        ragazzi a non sprecare l'acqua,
+                        l'oro blu che manca sempre più. 
+                    </p>
+                    <figure>
+                        <img class="photo school img-round-lg" src="/img/school.jpg" alt="bambini in una scuola">
+                        <figcaption>Nelle scuole</figcaption>
+                        <img class="photo water img-round-md" src="/img/water.jpg" alt="un bicchiere di acqua">
+                        <figcaption>Un bene prezioso</figcaption>
+                    </figure>
+                </article>
+
+                <!--Terzo box informativo-->
+                <article class="info-box card-item-2">
+                    <h2>Prodotti in rosa</h2>
+                    <p>
+                        Abbiamo creato un nuovo prodotto:
+                        Baby Iceberg, per sostenere la
+                        ricerca contro i tumori al
+                        seno.
+                    </p>
+                    <figure>
+                        <img class="photo flake img-round-lg" src="/img/flake.jpg" alt="fiocco rosa, simbolo della lotta contro i tumori al seno">
+                        <figcaption>Simbolo della lotta contro i tumori al seno</figcaption>
+                        <img class="photo baby_iceberg img-round-sm" src="/img/baby_iceberg.png" alt="il prodotto baby iceberg">
+                        <figcaption>Baby Iceberg</figcaption>
+                    </figure>
+                </article>
+            </section>
+
+            <!--Menù di navigazione-->
+            <nav>
+                <ul>
+                    <li><a href="/html/report.html" target="_blank">Report di sostenibilità</a><i class="bi bi-file-earmark-arrow-down-fill"></i></li>
+                    <li><a href="/html/prod-coll.html" target="_blank">Prodotti e Collaborazioni</a></li>
+                    <li><a href="/html/videos.html" target="_blank">I nostri video</a></li>
+                </ul>
+                <img class="salad" src="/img/salad.jpg" alt="">
+            </nav>
+        </main>
+
+        <!--Fondo pagina-->
+        <footer>
+            <!--Sezione contatti azienda-->
+            <address> 
+                <h3>Contatti</h3>
+                <div class="contacts"><span>Email <i class="bi bi-envelope-at-fill"></i></span><a href="mailto:planetfarms@gmail.com">planetfarms@gmail.com</a></div>
+                <div class="contacts"><span>Telefono <i class="bi bi-telephone-fill"></i></span><a href="tel:02 8765 4321">02 8765 4321</a></div>
+                <div class="contacts"><span>Instagram <i class="bi bi-instagram"></i></span><a href="https://www.instagram.com/planetfarms/">planet_farms</a></div>
+                <div class="contacts"><span>YouTube <i class="bi bi-youtube"></i></span><a href="https://www.youtube.com/@planetfarms">planetfarms</a></div>
+                <div class="companyData">
+                    <a href="/html/privacy.html" target="_blank">Informativa sulla privacy</a><br>
+                    P.IVA 02345678901
+                </div>
+            </address>
+        </footer>
+        <!--Collegamento al codice JS-->
+        <script src="/js/projects_interactive.js"> </script>
+    </body>
+</html>

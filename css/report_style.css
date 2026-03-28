@@ -1,0 +1,237 @@
+/*Stile tabella riassuntiva report*/
+table{
+    background-color:#FAEBD7;
+}
+
+.info-box{
+    background-color: #E8D29A;
+}
+
+.babilonia{
+    padding-top: 10px;
+}
+
+figcaption{
+    margin-bottom: 10px;
+    background-color: #E8D29A;
+    color: #000000;
+}
+
+.video_report{
+    gap: 15px;
+    margin-right: 50px;
+}
+
+video{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/*Stile bottone per il download e video introduttivo*/
+.download{
+    padding: 15px;
+    border-radius: 30px;
+    width: 300px;
+    height: auto;
+    border: 2px solid #000000;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.1);
+    background-color: #EBC700;
+}
+
+.pdf{
+    font-weight: bold;
+}
+
+.bi-download{
+    padding-left: 10px;
+}
+
+.video_report,
+.download{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pdf,
+.bi-download{
+    color: #000000;
+}
+
+.aztechi,
+.babilonia{
+    height: 200px;
+}
+
+.download,
+.aztechi,
+.babilonia{
+    width: 300px;
+}
+
+.download,
+.pdf{
+    font-size: 20px;
+}
+
+video,
+.info-box{
+    border-radius: 10px;
+}
+
+/* --------------------------
+    Feedback per il download
+----------------------------- */
+.download_message {
+    display: flex;
+    position: fixed; 
+    z-index: 1000; 
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 40px 15px 25px;
+    border-radius: 8px;
+    align-items: center;
+    border: 2px solid #FFFFFF;
+    background-color: #2D5A27;
+    box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+}
+
+.close_message{
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    font-size: 20px;
+    cursor: pointer;
+    border: #2D5A27;
+}
+
+.close_message:hover{
+    color: #EBC700;
+}
+
+/* -------------
+    Dark Mode
+---------------- */
+.dark_mode {
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 3px solid #35363A;
+    box-shadow: 0 5px 0 #35363A;
+    background-color: #FFFFFF;
+}
+
+.dark_mode:hover{
+    border: 3px solid #EBC700;
+}
+
+/* Stile testo bottone */
+.button_content {
+  font-size: 25px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  margin: 7px;
+  color: #FFFFFF;
+  background-color: #35363A;
+}
+
+/* Implementazione Dark Theme: ottimizzazione del contrasto per la
+ riduzione dell'affaticamento visivo in condizioni di scarsa luminosità. */
+
+/* Raggruppamento degli elementi con sfondo scuro con testo bianco */
+body.dark-theme,
+body.dark-theme header,
+body.dark-theme .title,
+body.dark-theme main,
+body.dark-theme table,
+body.dark-theme .info-box,
+body.dark-theme nav,
+body.dark-theme figcaption,
+body.dark-theme footer,
+body.dark-theme .download_message,
+body.dark-theme .close_message {
+    background-color: #35363A; 
+    color: #FFFFFF;           
+}
+
+/* Raggruppamento degli elementi che necessitano di un bordo bianco per contrasto */
+body.dark-theme .info-box,
+body.dark-theme nav,
+body.dark-theme footer,
+body.dark-theme video,
+body.dark-theme .download_message,
+body.dark-theme span,
+body.dark-theme header {
+    border: 2px #FFFFFF solid;
+}
+
+/* Eccezioni specifiche */
+body.dark-theme .title {
+    border: 8px #FFFFFF solid;
+    background: linear-gradient(135deg, #2D5A27 0%, #1A3517 80%);
+}
+
+body.dark-theme .download {
+    background-color: #D6D2CB;
+    border: 4px #EBC700 solid;
+}
+
+body.dark-theme .button_content {
+    background-color: #EBC700;
+    color: #000000;
+}
+/* ----------------------------------------------------------------
+    Responsive Design per adattare il layout ai dispositivi mobile
+------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    .title{
+        margin-top: 15px;
+    }
+
+    main{
+        padding: 5px 10px; 
+    }
+    
+    .structure{
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .info-box {
+        width: 95%; 
+        margin: 10px auto;
+        border-radius: 20px;
+        text-align: justify;
+        text-align-last: left;
+        hyphens: auto;
+        font-size: 15px;
+    }
+
+    video {
+        width: 100%; /* Il video occupa tutta la larghezza del telefono */
+        height: auto;
+    }
+
+    .video_report {
+        margin-right: 0; 
+        width: 100%;
+        align-items: center;
+    }
+
+    .download {
+        display: flex;
+        margin: 20px auto;
+        justify-content: center;
+        width: fit-content;
+        height: auto;
+        padding: 15px;
+    }
+    
+    nav {
+        margin: 0 -10px -5px -10px;
+    }
+}

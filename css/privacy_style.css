@@ -1,0 +1,114 @@
+/* ----------------
+    Tabella Privacy
+------------------- */
+p{
+    color: #FFFFFF;
+}
+
+table{
+    background-color:#E8D29A;
+}
+
+td{
+    line-height: 1.5;
+}
+
+.img_table{
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    box-shadow: 8px 8px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------
+    Sezioni legali
+------------------- */
+
+.legal-section{
+    margin: 20px 20px;
+    padding: 30px;
+    border-radius: 15px;
+    border: solid 1px #D6D2CB;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background-color: #FFFFFF;
+}
+
+.legal-section h2{
+    display: inline-block;
+    font-size: 26px;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    /* Bordo inferiore color oro per mettere in risalto il titolo della sezione */  
+    border-bottom: 2px solid #EBC700;
+    color: #2D5A27;
+}
+
+.legal-section dd{       
+    margin: 5px 0 10px 0;
+    /* Interlinea più ampia per un minor affaticamento visivo*/
+    line-height: 1.6;     
+    text-align: justify;
+}
+
+/* Per mettere in evidenza le sezioni critiche,
+   come la gestione dei Data Breach,
+   mediante un bordo sinistro marcato */
+.data_breach {
+    border-left: 6px solid #1A3517;
+}
+
+.list dt{
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #2D5A27;
+}
+
+.cookie .list{
+    padding-left: 10px;
+}
+
+.legal-section dd,
+.cookie p,
+.cookie p:last-of-type{
+    color: #35363A;
+}
+
+.cookie p:last-of-type {
+    margin-top: 25px;
+    padding-top: 15px;
+    font-style: italic;
+    border-top: 1px solid #D6D2CB; /* Una sottile linea di separazione */
+}
+
+.no-padding{
+    padding-bottom: 0;
+}
+
+/* ----------------------------------------------------------------
+    Responsive Design per adattare il layout ai dispositivi mobile
+------------------------------------------------------------------- */
+@media (max-width: 768px) { 
+
+    main {
+        padding: 5px 10px; 
+    }
+
+    th{
+        text-align: left; 
+    }
+
+    td{
+        font-size: 15px;
+    }
+
+    .img_table {
+        width: 120px; 
+        height: 120px;
+    }
+
+    nav {
+        margin: 0 -10px -5px -10px;
+    }
+}

@@ -1,0 +1,205 @@
+/*Stile dei tre paragrafi*/
+.info-box{
+    background-color: #EBC700;
+}
+
+.card-item-1{
+    margin-left: 10px;
+}
+
+.card-item-3{
+    margin-top: 10px;
+}
+
+.pesto{
+    width: 250px;
+    height: 200px;
+}
+
+.b-corp{
+    width: 80px;
+    height: 100px;
+}
+
+figcaption{
+    margin: 5px 130px 0 0;
+}
+
+.kitchen,
+.bowl,
+.pasta,
+.products{
+    width: 200px;
+    height: 200px;
+}
+
+.photo,
+.card-item-2{
+    margin-top: 10px;
+}
+
+/* -------------
+    Mini Shop
+---------------- */
+
+/* Posizionamento del contenitore per il mini shop */
+.shop_card-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+/* Stile della mini shop */
+.shop-card {
+    display: none; /* Per tenerlo nascosto all'inizio*/
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+    left: 10%; /* Appare a destra dell'immagine */
+    width: 250px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 2px solid #2D5A27;
+}
+
+select{
+    font-size: 20px;
+    border: 2px solid #000000;
+}
+
+h3{
+    margin: 0 0 10px 0;
+    font-size: 27px;
+}
+
+.close {
+    float: right;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    background: none;
+    color: #000000;
+}
+
+#buy {
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    background-color: #2D5A27;
+    color: #FFFFFF;
+}
+
+.success-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.bi-leaf-fill{
+    transform: scaleX(-1); /*Per dare "l'effetto specchio" all' icona*/
+}
+
+.bi-hand-index-thumb{
+    transform: rotate(180deg); /*Per poter ruotare l'icona*/
+    padding: 0 5px 3px 0;
+}
+
+.bi-leaf-fill,
+.bi-hand-index-thumb{
+    display: inline-block; 
+}
+
+.text_message,
+.bi-leaf-fill{
+    color: #2D5A27;
+}
+
+.descr5,
+.descr6{
+    margin-top: 5px;
+}
+
+.b-corp { 
+    margin-top: 10px;
+}
+
+.products{
+    cursor: pointer;
+    margin-top: 237px;
+}
+
+.b-corp,
+.products {
+    display: block;   
+}
+
+.click_down{
+    padding: 5px 3px;
+    border-radius: 50px;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 25px;
+    background-color: #2D5A27;
+    color: #FFFFFF;
+}
+
+.text_message,
+.click_down{
+    border: 2px #FFFFFF solid;
+}
+
+/* ----------------------------------------------------------------
+    Responsive Design per adattare il layout ai dispositivi mobile
+------------------------------------------------------------------- */
+@media (max-width: 768px) {
+
+    .title{
+        margin-left: -3px;
+        padding-bottom: 5px;
+    }
+
+    main{
+        padding-top: 10px;
+    }
+    
+    .card-item-3{
+        padding-right: 50px;
+    }
+
+    figcaption{
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .bi-hand-index-thumb{
+        padding-right: 20px;
+    }
+
+    .click_down,
+    figcaption,
+    .bi-hand-index-thumb
+    {
+        font-size: 20px;
+    }
+
+    .shop-card{
+        margin: 15px 0 0 5px;
+    }
+
+    select,
+    #buy{
+        font-size: 17px;
+    }
+
+    footer{
+        padding-top: 10px;
+    }
+}
